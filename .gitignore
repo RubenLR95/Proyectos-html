@@ -1,0 +1,6 @@
+#Ignorar carpeta: (nombre carpeta)/
+pruebas/
+#Ignorar archivos específicos: (Nombre del archivo)
+token.txt
+#Ignorar todos los archivos de un tipo específico:  *.(tipo de archivo)
+*.log
