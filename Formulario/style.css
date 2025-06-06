@@ -1,0 +1,82 @@
+body{
+    background-image: url(https://www.pixelstalk.net/wp-content/uploads/image12/Aesthetic-green-wallpaper-featuring-a-subtle-abstract-pattern-that-adds-visual-interest.jpg);
+    width: 100%;     /* OCUPATODO EL ANCHO DISPONIBLE */
+    height: 100vh;   /*ALTURA IGUAL QUE LA VENTANA DEL NAVEGADOR*/
+    margin: 0;     /*ELIMINA MÁRGENES POR DEFECTO*/
+    background-color: rgb(158, 162, 125); /*COLOR DE FONDO DE body */
+    color: rgb(61, 81, 83);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/*TIPO DE LETRA QUE SE APLICA EN TODO EL body*/
+    font-size: 16px /*TAMAÑO DE LETRA*/
+}
+
+label{
+
+    display: block; /*CADA ETIQUETA OCUPA SU PROPIA LINEA*/
+    margin: 0.1em 0; /*PEQUEÑO ESPACIO VERTICAL ENTRE ETIQUETAS*/
+}
+
+/*ENCABEZADOS*/
+h1, p{
+    margin: 0.5em auto; /*MARGEN VIERTICAL Y CENTRADO HORIZONTAL*/
+    text-align: center; /*CENTRA EL TEXTO DENTRO DEL CONTENEDOR*/
+}
+
+/*CONTENEDOR DEL FORMULARIO*/
+
+form{
+    padding-top: 0em; /*SIN ESPACIO ARRIBA*/
+    margin: 0 auto; /*CENTRA HORIZONTALMENTE EL FORMULARIO*/
+    max-width: 500px; /*ANCHO MÁXIMO*/
+    min-width: 300px; /*ANCHO MÍNIMO PARA DISPOSITIVOS PEQUEÑOS*/
+    width: 60vw; /*ANCHO RELATIVO AL 60% DE LA VENTANA*/
+    padding: 1em;
+
+}
+
+/*ESTILOS A fieldset */
+
+fieldset{
+    border: 0; /*ELIMINA EL BORDE POR DEFECTO */
+    padding: 0.5rem 0; /*ESPCIADO INTERNO VERTICAL*/
+    border-bottom: 3px solid rgb(255, 255, 255); /*LINEA DECORATIVA*/
+}
+
+fieldset:last-of-type{
+    border-bottom: none; /*ELIMINA LA LINEA DECORATIVA DEL ULTIMO FIELDSET*/
+}
+
+/*REFUERZO POR COMPATIBILIDAD*/
+label{
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,textarea,select{
+    margin: 10px 0 0 0; /*ESPACIADO SUPERIOR ENTRE CAMPOS*/
+    width: 100%; /*ANCHO COMPLETO DEL CONTENIDO*/
+    min-height: 2em; /*ALTURA MÍNIMA PARA MEJOR ACCESO*/
+}
+
+.inline{
+    width: unset; /*RESTAURA AUTOMÁTICAMENTE AL SELECCIONAR OTRA OPCIÓN*/
+    margin: 0 0.5em 0 0;
+    vertical-align: middle; /*ALINEACIÓN VERTICAL*/
+}
+
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    color: white;
+    background-color: rgb(111, 129, 86);
+    min-width: 300px;
+}
+
+input[type="file"]{
+    padding: 1px 2px  /*PEQUEÑO RELLENO PARA MEJORAR LA APRIENCIA*/
+}
+a{
+    color: beige;
+}

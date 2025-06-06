@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario de registro</title>
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <p>Por favor, complete el formulario de registro</p>
+
+    <!-- FORMULARIO CON HTML CON METADO "POST" (ENVIO DE DATOS) Y DESTINO (ENVÍO) A UN URL EXTERNO -->
+    <form action="#enlace a pagina de recepcion" method="post">
+      <!-- GRUPO DE CAMPOS RELACIONADOS: DATOS PERSONALES -->
+      <fieldset>
+        <!-- for id (DEBEN COINCIDIR) CREA UN VÍNCULO ENTRE label E input. 
+             * ACCESIBILIDAD: MEDIANTE AUDIO LOS LECTORES DE PANTALLA LE DICEN AL USUARIO EN QUE CAMPPO ESTÁN ESCRIBIENDO
+             * USABILIDAD: AL HACER CLICK EN label EL NAVEGADOR ENFOCA AUTOMÁTICAMENTE A input -->
+        <!-- CAMPO DE TEXTO PARA EL NOMBRE -->
+        <label for="first-name">
+          Ingrese su nombre:
+          <input id="first-name" type="text" required name="first-name" />
+          <!-- required OBLIGA A COMPLETARE EL CAMPO -->
+        </label>
+
+        <!-- CAMPO DE TEXTO PARA EL APELLIDO -->
+
+        <label for="last-name">
+          Ingrese sus apellidos:
+          <input id="last-name" type="text" required name="last-name" />
+          <!-- required OBLIGA A COMPLETARE EL CAMPO -->
+        </label>
+
+        <!-- CAMPO PARA INTRODUCIR UN CORREO ELECTRÓNICO. SE CAMBIA EL type DE text A e-mail -->
+        <label for="e-mail">
+          Ingrese su e-mail:
+          <input id="e-mail" type="e-mail" required name="e-mail" />
+          <!-- required OBLIGA A COMPLETARE EL CAMPO -->
+        </label>
+
+        <!-- CAMPO PARA INTRODUCIR UNA CONTRASEÑA -->
+        <label for="new-password">
+          Cree una contraseña nueva:
+          <!-- pattern VALIDA QUE AL MENOS TENGA 8 CARACTERES, PERMITE LETRAS DE A-Z(MAYUSC) Y a-z(MINUSC), Y NUMEROS 0-9 -->
+          <input
+            id="new-password"
+            type="password"
+            pattern="[a-z A-Z 0-9]¨{8,}"
+            required
+            name="password"
+          />
+        </label>
+      </fieldset>
+
+      <fieldset>
+         
+        <!-- RADIO BUTTON PARA LA CUENTA PERSONAL -->
+         Selecciona el tipo de cuenta:
+        <label for="personal-account">
+          <input
+            type="radio"
+            name="account-type"
+            id="personal-account"
+            class="inline"
+          />
+          Cuenta Personal
+          
+        </label>
+        <!-- RADIO BUTTON PARA LA CUENTA EMPRESARIAL -->
+        <label for="bussines-account">
+          <input
+            type="radio"
+            name="account-type"
+            id="bussines-account"
+            class="inline"
+         />
+          Cuenta empresarial
+        </label>
+        <!-- CASILLA DE VERIFICACIÓN PARA ACEPTAR TERMINOS -->
+         <label for="terms-and-conditions">
+            <input type="checkbox" id="terms-and-conditions" name="terms" class="inline">
+            Acepto los <a href="#enlace de terminos y condiciones" target="_blank"> términos y condiciones.</a>
+         </label>
+      </fieldset>
+
+
+      <!-- INFORMACIÓN ADICIONAL -->
+      <fieldset>
+         <!-- SUBIR ARCHIVO DE IMAGEN -->
+         <label for="profile-picture">
+             Subir una foto de perfil
+            <input type="file" id="profile-picture" name="file">
+           
+
+         </label>         
+         
+         <!-- AÑADIR FECHA DE NACIMIENTO O EDAD PARA COMPROBAR EDAD, QUE PERMITA SOLO USUARIOS ENTRE 13 Y 120 AÑOS -->
+          <label for="age">
+            Añade tu edad (años):
+            <input
+            id="age"
+            type="number"
+            pattern="[0-9]¨{2,}"
+            required
+            name="age"
+          />
+            
+
+         </label>  
+
+         <!-- LISTA DESPLEGABLE PARA SELECCIONAR OPCIONES -->
+
+         <label for="referrer" name="referrer">
+            ¿Como nos conociste?
+            <!-- <select> SELECTOR DE OPCIONES EN DESPLEGABLE -->
+            <select id="referrer">
+            <option value="">(selecciona uno)</option>
+            <option value="1">Busqueda en Google</option>
+            <option value="2">Youtube</option>
+            <option value="3">Tik Tok / Instagram</option>
+            <option value="4">Amigos o familiares que nos conociesen</option>
+            </select>
+         </label>
+
+         <!-- AÑADE UNA BREVE BIOGRAFIA -->
+         <label for="bio">
+            Escribe una breve descripción sobre tí:
+            <textarea id="bio"
+            rows="3"
+            cols="30"
+            placeholder="Me gusta programar en la playa"
+            name="text">
+         </textarea>
+
+
+      </fieldset>
+      <!-- AÑADIR BOTÓN "ENVIAR FORMULARIO" PARA ENVIAR EL FORMULARIO -->
+       <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
